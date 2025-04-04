@@ -28,7 +28,7 @@
                 </div>
             </div>
             <?php if(wp_is_Mobile()) { ?>
-                <img class="absolute left-5 top-0 ml-4 border border-gray-200 shadow bg-gray-100 object-contain aspect-square p-2"  
+                <img class="absolute left-5 top-0 ml-4 border border-gray-200 shadow bg-gray-100 object-contain h-[100px] aspect-square p-2"  
                      src="<?php the_field( 'proyecto-logo',$post_id ); ?>" />
             <?php } ?>
             <div class="relative p-4 md:px-4 md:py-5">
