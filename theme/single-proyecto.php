@@ -307,10 +307,10 @@ get_header(); ?>
     <div class="py-8 bg-[#00B147]">
         <div class="flex flex-col md:flex-row justify-center md:text-center container mx-auto md:w-full md:justify-center md:items-center md:gap-4">
             <div class="flex justify-center items-center gap-4 mb-8 md:mb-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-headset scale-[3] md:scale-[3] " viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-headset scale-[2.5] md:scale-[3] " viewBox="0 0 16 16">
                 <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5" />
             </svg>
-            <h3 class="text-white mb-0 text-3xl md:text-4xl font-bold">Hablar con un asesor</h3>
+            <h3 class="text-white mb-0 text-2xl md:text-4xl font-bold">Hablar con un asesor</h3>
             </div>
             <button class="bg-transparent hover:bg-white border border-white text-white hover:text-[#00B147] px-4 py-2 rounded-0 hover:bg-opacity-90 transition-all uppercase tracking-wider text-lg" onclick="window.open('/contactenos', '_blank')">Click aquí</button>
         </div>
