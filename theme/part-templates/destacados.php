@@ -43,15 +43,15 @@
                 
                 <div class="grid grid-cols-4 my-4 md:flex md:gap-2 md:items-center md_my-3">
                     <?php if (!empty($habitaciones)) { ?>
-                        <img src="/wp-content/themes/understrap-child-main/assets/bedroom.png" width="35">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/bedroom.png" class="w-[35px]">
                         <span><?php echo $habitaciones;?> alcobas</span>
                     <?php } ?>
                     <?php if (!empty($banhos)) { ?>
-                        <img src="/wp-content/themes/understrap-child-main/assets/bath.png" width="30">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/bath.png" width="30">
                         <span><?php echo $banhos;?> baños</span>
                     <?php } ?>
                     <?php if (!empty($parqueaderos)) { ?>
-                        <img src="/wp-content/themes/understrap-child-main/assets/parking.png" width="35">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/parking.png" width="35">
                         <span><?php echo $parqueaderos;?> parqueaderos</span>
                     <?php } ?>
                 </div>

@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
             <a target="_blank" href="<?php the_field('enlace-whatsapp', 'option'); ?>">
                 <div class="grid grid-cols-12">
                     <div class="col-span-3 <?php if(wp_is_Mobile()) echo 'pl-1'?>">
-                        <img src="/wp-content/themes/understrap-child-main/assets/whatsapp.png" class="block rounded-full w-[50px] rotate-0 hover:rotate-[-360deg] transition-all duration-1000" alt="...">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/whatsapp.png" class="block rounded-full w-[50px] rotate-0 hover:rotate-[-360deg] transition-all duration-1000" alt="...">
                     </div>
                     <div class="col-span-7 flex items-center">
                         <p class="text-left text-[#003A70] text-base font-semibold cursor-pointer mb-0">Whatsapp</p>
@@ -28,7 +28,7 @@ defined( 'ABSPATH' ) || exit;
             <a target="_blank" href="<?php the_field('enlace-pse', 'option'); ?>">
                 <div class="grid grid-cols-12">
                     <div class="col-span-3 <?php if(wp_is_Mobile()) echo 'pl-1'?>">
-                        <img src="/wp-content/themes/understrap-child-main/assets/pse.jpg" class="block rounded-full w-[50px] rotate-0 hover:rotate-[-360deg] transition-all duration-1000" alt="...">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/pse.jpg" class="block rounded-full w-[50px] rotate-0 hover:rotate-[-360deg] transition-all duration-1000" alt="...">
                     </div>
                     <div class="col-span-7 flex items-center">
                         <p class="text-left text-[#003A70] text-base font-semibold cursor-pointer mb-0">Pagos PSE</p>
@@ -41,7 +41,7 @@ defined( 'ABSPATH' ) || exit;
             <a target="_blank" href="/referido">
                 <div class="grid grid-cols-12">
                     <div class="col-span-3 <?php if(wp_is_Mobile()) echo 'pl-1'?>">
-                        <img src="/wp-content/themes/understrap-child-main/assets/btn-referal.png" class="block rounded-full w-[50px] rotate-0 hover:rotate-[-360deg] transition-all duration-1000" alt="...">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/btn-referal.png" class="block rounded-full w-[50px] rotate-0 hover:rotate-[-360deg] transition-all duration-1000" alt="...">
                     </div>
                     <div class="col-span-7 flex items-center">
                         <p class="text-left text-[#003A70] text-base font-semibold cursor-pointer mb-0">Refiere y gana</p>
@@ -58,7 +58,7 @@ defined( 'ABSPATH' ) || exit;
             <a target="_blank" href="<?php echo $waze; ?>">
                 <div class="grid grid-cols-12">
                     <div class="col-span-3 <?php if(wp_is_Mobile()) echo 'pl-1'?>">
-                        <img src="/wp-content/themes/understrap-child-main/assets/waze-icon.svg" class="block rounded-full w-[50px] rotate-0 hover:rotate-[-360deg] transition-all duration-1000" alt="...">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/waze-icon.svg" class="block rounded-full w-[50px] rotate-0 hover:rotate-[-360deg] transition-all duration-1000" alt="...">
                     </div>
                     <div class="col-span-7 flex items-center">
                         <p class="text-left text-[#003A70] text-base font-semibold cursor-pointer mb-0">Ir con Waze</p>
