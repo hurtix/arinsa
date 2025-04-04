@@ -12,6 +12,9 @@ body {
 .desktop .container {
 	max-width: calc(100% - 30%) !important;
 }
+.mobile .container {
+	max-width: calc(100% - 10%) !important;
+}
 .overlay {
 	width: 100%;
 	height: 100%;
