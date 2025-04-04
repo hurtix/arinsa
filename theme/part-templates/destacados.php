@@ -28,9 +28,8 @@
                 </div>
             </div>
             <?php if(wp_is_Mobile()) { ?>
-                <img class="absolute left-0 top-0 ml-4 border shadow bg-gray-100 rounded-b object-contain" 
-                     src="<?php the_field( 'proyecto-logo',$post_id ); ?>" 
-                     style="width: 75px; max-width: 75px; max-height: 75px; height: 75px;" />
+                <img class="absolute left-5 top-0 ml-4 border border-gray-200 shadow bg-gray-100 rounded-b object-contain h-25 aspect-square p-2"  
+                     src="<?php the_field( 'proyecto-logo',$post_id ); ?>" />
             <?php } ?>
             <div class="relative p-4 md:px-4 md:py-5">
                 <?php if(!wp_is_Mobile()) { ?>
