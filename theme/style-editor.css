@@ -916,8 +916,8 @@ ol {
 .max-w-none {
   max-width: none;
 }
-.min-w-\[400px\] {
-  min-width: 400px;
+.min-w-full {
+  min-width: 100%;
 }
 .translate-x-0 {
   --tw-translate-x: calc(var(--spacing) * 0);
@@ -1705,6 +1705,11 @@ ol {
 @media (width >= 48rem) {
   .md\:w-full {
     width: 100%;
+  }
+}
+@media (width >= 48rem) {
+  .md\:min-w-\[400px\] {
+    min-width: 400px;
   }
 }
 @media (width >= 48rem) {

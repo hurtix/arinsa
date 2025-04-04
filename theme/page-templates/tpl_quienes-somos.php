@@ -92,7 +92,7 @@ get_header(); ?>
                             <?php for($i = 1; $i <= 6; $i++): ?>
                             <div class="swiper-slide swiper-no-swiping">
                                 <img class="w-full md:w-3/4 pointer-events-none mx-auto" 
-                                     src="https://constructoraarinsa.com/wp-content/themes/understrap-child-main/assets/wheel_v2_<?php echo $i; ?>.png" 
+                                     src="<?php echo get_template_directory_uri(); ?>/assets/wheel_v2_<?php echo $i; ?>.png" 
                                      alt="">
                             </div>
                             <?php endfor; ?>
