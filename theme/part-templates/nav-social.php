@@ -54,7 +54,7 @@ defined( 'ABSPATH' ) || exit;
         $waze = get_field('enlace_waze');
         if (!empty($waze)) {
         ?>
-        <li class="block my-1 bg-black/35 w-[300px] text-left p-2 rounded-l-3xl transition-all duration-1000 hover:translate-x-[-150px] hover:bg-white/99 hover:shadow-lg">
+        <li class="block my-1 bg-black/35 w-[300px] text-left p-2 rounded-tl-full rounded-bl-full transition-all duration-1000 hover:translate-x-[-150px] hover:bg-white/99 hover:shadow-lg">
             <a target="_blank" href="<?php echo $waze; ?>">
                 <div class="grid grid-cols-12">
                     <div class="col-span-3 <?php if(wp_is_Mobile()) echo 'pl-1'?>">
