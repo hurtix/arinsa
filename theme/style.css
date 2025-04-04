@@ -986,14 +986,14 @@ ol {
 .h-20 {
   height: calc(var(--spacing) * 20);
 }
-.h-25 {
-  height: calc(var(--spacing) * 25);
-}
 .h-100 {
   height: calc(var(--spacing) * 100);
 }
 .h-\[30px\] {
   height: 30px;
+}
+.h-\[100px\] {
+  height: 100px;
 }
 .h-auto {
   height: auto;
