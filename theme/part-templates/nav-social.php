@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<nav class="fixed top-1/2 right-[-240px] z-50">
+<nav id="navsocial" class="fixed top-1/2 right-[-240px] z-50">
     <ul class="p-0 translate-x-0">
         <li class="block my-1 bg-black/35 w-[300px] text-left p-2 rounded-tl-full rounded-bl-full transition-all duration-1000 hover:translate-x-[-150px] hover:bg-white/99 hover:shadow-lg">
             <a target="_blank" href="<?php the_field('enlace-whatsapp', 'option'); ?>">

@@ -11,7 +11,7 @@
 defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
-<div class="w-full min-h-screen select-none bg-blue-600">
+<div class="w-full min-h-screen select-none bg-blue-500">
     <div class="relative">
         <div class="relative">
             <?php 
@@ -23,7 +23,7 @@ get_header();
                 $width = "300";
             }
             ?>
-            <img class="<?php echo $class;?>" src="/wp-content/uploads/2024/01/h_arinsa_light.svg" alt="Logo Arinsa" width="<?php echo $width;?>">
+            <img class="<?php echo $class;?>" src="https://constructoraarinsa.com/wp-content/uploads/2024/01/h_arinsa_light.svg" alt="Logo Arinsa" width="<?php echo $width;?>">
             
             <div class="flex flex-col md:flex-row">
                 <?php if(!wp_is_Mobile()) { ?>
@@ -31,9 +31,9 @@ get_header();
                         <img class="object-cover w-full h-screen max-h-screen select-none pointer-events-none" src="<?php the_field('fondo'); ?>" alt="">
                     </div>
                 <?php } ?>
-                <div class="w-full md:w-4/12 bg-white overflow-y-auto max-h-screen">
+                <div class="w-full md:w-4/12 bg-gray-500 overflow-y-auto overflow-x-hidden max-h-screen">
                     <div class="p-4">
-                        <p class="font-bold text-2xl text-blue-600"><?php the_field('titulo'); ?></p>
+                        <p class="font-bold text-2xl text-blue-500"><?php the_field('titulo'); ?></p>
                         <?php echo do_shortcode('[contact-form-7 id="4cd6ebf"]'); ?>
                     </div>
                 </div>
@@ -43,66 +43,118 @@ get_header();
 </div>
 
 <style>
+    #masthead,
+    #navsocial {
+        display: none;
+    }
     /* Form Styles */
-    .wpcf7-form input:not([type="checkbox"]):not([type="radio"]),
+        .wpcf7-form input:not([type="checkbox"]):not([type="radio"]),
     .wpcf7-form select,
     .wpcf7-form textarea {
-        @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.375rem;
+        outline: none;
     }
 
-    .wpcf7-form input[type="number"] {
-        @apply appearance-textfield;
+    .wpcf7-form input:not([type="checkbox"]):not([type="radio"]):focus,
+    .wpcf7-form select:focus,
+    .wpcf7-form textarea:focus {
+        border-color: gray;
+        box-shadow: 0 0 0 2px rgba(137, 148, 161, 0.5);
     }
+
+        .wpcf7-form input[type="number"] {
+        -moz-appearance: textfield;
+        appearance: textfield;
+    }
+
+    .wpcf7-form select, .wpcf7-form textarea {
+  background-color: white;
+}
 
     .acepto p {
-        @apply leading-none text-xs;
+        line-height: 1;
+        font-size: 0.75rem;
     }
 
     /* Custom Switch */
     .flipswitch {
-        @apply relative w-[55px] h-[30px] cursor-pointer rounded-md bg-blue-500 border border-gray-300;
+        background-image: none !important;
+        position: relative;
+        width: 55px;
+        height: 30px;
+        cursor: pointer;
+        border-radius: 0.375rem;
+        background-color: darkred;
+        border: 1px solid #e5e7eb;
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+        color: green;
+    }
+
+    [type="checkbox"]:focus {
+        border-color: gray;
+        box-shadow: 0 0 0 2px rgba(137, 148, 161, 0.5);
     }
 
     .flipswitch::after {
-        @apply absolute top-0 left-[2%] w-[45%] h-full bg-white text-center transition-all duration-300 border border-gray-400 rounded content-['NO'];
+        position: absolute;
+        top: 0;
+        left: 2%;
+        width: 50%;
+        height: 100%;
+        background-color: white;
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 1px solid #9ca3af;
+        border-radius: 0.25rem;
+        content: 'NO';
         line-height: 28px;
+        font-weight:bold;
+        color: darkred;
     }
 
     .flipswitch:checked::after {
-        @apply left-[53%] content-['SI'];
+        left: 50%;
+        content: 'SI';
+        font-weight:bold;
+        color: green;
     }
 
     /* Form Messages */
     .wpcf7-response-output {
-        @apply fixed top-0 left-0 w-full m-0 p-3 text-center;
+        margin: 0 !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0.75rem;
+        text-align: center;
     }
 
     .wpcf7 form.invalid .wpcf7-response-output {
-        @apply bg-red-100 border-2 border-red-200 text-red-800;
+        background-color: #fee2e2;
+        border: 2px solid #fecaca;
+        color: darkred;
     }
 
     .wpcf7 form.sent .wpcf7-response-output {
-        @apply bg-green-100 border-2 border-green-200 text-green-800;
+        background-color: #dcfce7;
+        border: 2px solid #bbf7d0;
+        color: green;
     }
-
-    /* Hide navbar and footer */
-    #masthead {
-  display: none;
-}
 
     /* Form Validation Styles */
     .wpcf7-not-valid-tip {
-        @apply hidden;
+        display: none;
     }
 
     .wpcf7-form .wpcf7-not-valid {
-        @apply border-red-500;
+        border-color: red;
         padding-right: calc(1.5em + 0.75rem);
         background-repeat: no-repeat;
         background-position: right calc(0.375em + 0.1875rem) center;
@@ -110,8 +162,27 @@ get_header();
     }
 
     .wpcf7-form .wpcf7-validated {
-        @apply border-green-500;
+        border-color: green;
     }
+    .wpcf7-form-control.wpcf7-submit {
+  background: var(--color-yellow-500);
+  color: white;
+  font-weight: bold;
+  border-radius:0 !important;
+}
+.wpcf7-list-item-label a {
+  color: var(--color-yellow-500);
+  font-weight: bold;
+}
+.wpcf7-list-item label {
+  display: flex;
+  align-items: center;
+  gap:
+1em;
+}
+.wpcf7-form .lead {
+  font-size: 1.2rem;
+}
 </style>
 
 <script>

@@ -37,14 +37,14 @@
 			--gris: <?php the_field('color_3', 'option'); ?>;
 		}
 
-		.text-blue-500 {
+		.text-blue-500,
+		.hover\:text-blue-500:hover {
 			color: var(--azul-arinsa);
 		}
 
 		.border-blue-500 {
 			border-color: var(--azul-arinsa);
 		}
-
 		.bg-blue-500,
 		.hover\:bg-blue-500:hover {
 			background-color: var(--azul-arinsa);

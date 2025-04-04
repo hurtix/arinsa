@@ -19,6 +19,7 @@
                 </a>
             </div>
 
+            
             <button id="navbar-toggle" 
                     data-collapse-toggle="navbar-main" 
                     type="button" 
@@ -31,13 +32,13 @@
                 </svg>
             </button>
 
-            <div class="hidden w-full md:block md:w-auto" id="navbar-main">
+                        <div class="hidden h-screen md:h-auto w-full md:block md:w-auto bg-[var(--azul-arinsa)] md:bg-transparent absolute md:relative top-full md:top-auto left-0 right-0 md:left-auto md:right-auto" id="navbar-main">
                 <?php
                 wp_nav_menu(
                     array(
                         'theme_location' => 'menu-1',
                         'menu_id'        => 'primary-menu',
-                        'menu_class'     => 'list-none pl-0 mb-0 flex flex-col font-medium p-4 md:p-0 mt-4 md:flex-row md:mt-0 md:border-0',
+                        'menu_class'     => 'list-none md:pl-0 mb-0 flex flex-col font-medium p-4 md:p-0 mt-0 md:flex-row md:mt-0 md:border-0',
                         'container'      => false,
                         'items_wrap'     => '<ul id="%1$s" class="%2$s" aria-label="submenu">%3$s</ul>',
                         'add_li_class'   => 'nav-item relative group',
@@ -75,21 +76,23 @@
 </script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Flowbite Collapse
+    // Mobile menu toggle
     const targetEl = document.getElementById('navbar-main');
     const triggerEl = document.getElementById('navbar-toggle');
     
-    const options = {
-        onCollapse: () => {
-            triggerEl.setAttribute('aria-expanded', 'false');
-        },
-        onExpand: () => {
-            triggerEl.setAttribute('aria-expanded', 'true');
-        },
-        onToggle: () => {
-            console.log('navbar toggled');
-        }
-    };
+    if (triggerEl && targetEl) {
+        triggerEl.addEventListener('click', () => {
+            const isExpanded = triggerEl.getAttribute('aria-expanded') === 'true';
+            
+            if (isExpanded) {
+                targetEl.classList.add('hidden');
+                triggerEl.setAttribute('aria-expanded', 'false');
+            } else {
+                targetEl.classList.remove('hidden');
+                triggerEl.setAttribute('aria-expanded', 'true');
+            }
+        });
+    }
 
     const instanceOptions = {
         id: 'navbar-main',
@@ -124,7 +127,8 @@ document.addEventListener('DOMContentLoaded', function() {
 				'flex-col',
                 'list-none',
                 'pl-8',
-                'mb-0'
+                'mb-0',
+                'z-1'
             );
             
             // Add dropdown arrow

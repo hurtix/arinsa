@@ -23,7 +23,7 @@ defined('ABSPATH') || exit;
                     'orderby'           => 'rand',
                 ));
                 if ($posts) { ?>
-                    <ul class="list-none m-0 p-0 grid grid-cols-2 gap-2 md:grid md:grid-cols-4 md:gap-4 select-none">
+                    <ul class="list-none m-0 p-0 grid grid-cols-1 md:grid-cols-2 gap-2 md:grid md:grid-cols-4 md:gap-4 select-none">
                         <?php foreach ($posts as $post) :
                             setup_postdata($post); ?>
                             <li class="transition-all duration-300 ease-in-out hover:scale-102">

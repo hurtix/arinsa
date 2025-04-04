@@ -56,7 +56,7 @@ get_header(); ?>
 
 
 	<div class="w-full text-center leading-none relative">
-		<h1 class="bg-yellow-500 text-white text-5xl font-bold uppercase px-5 py-3 leading-none mb-0">Proyectos en venta</h1>
+		<h1 class="bg-yellow-500 text-white text-5xl font-bold uppercase px-15 md:px-5 py-3 leading-none mb-0">Proyectos en venta</h1>
 	</div>
 
 	<section class="py-20">
@@ -67,7 +67,7 @@ get_header(); ?>
 					$post_id = get_field('proyecto_1');
 					set_query_var('proyecto', $post_id); ?>
 					<h1 class="text-center py-10 uppercase">
-						<span class="bg-blue-500 text-white px-4 text-5xl font-bold tracking-wider"><?php the_field('etapa_comercial', $post_id); ?></span>
+						<span class="bg-blue-500 text-white px-4 text-3xl md:text-5xl font-bold tracking-wider"><?php the_field('etapa_comercial', $post_id); ?></span>
 					</h1>
 					<?php get_template_part('/part-templates/destacados');
 					wp_reset_query();
@@ -79,7 +79,7 @@ get_header(); ?>
 					$post_id = get_field('proyecto_2');
 					set_query_var('proyecto', $post_id); ?>
 					<h1 class="text-center py-10 uppercase">
-						<span class="bg-blue-500 text-white px-4 text-5xl font-bold tracking-wider"><?php the_field('etapa_comercial', $post_id); ?></span>
+						<span class="bg-blue-500 text-white px-4 text-3xl md:text-5xl font-bold tracking-wider"><?php the_field('etapa_comercial', $post_id); ?></span>
 					</h1>
 					<?php get_template_part('/part-templates/destacados');
 					wp_reset_query();
@@ -91,7 +91,7 @@ get_header(); ?>
 					$post_id = get_field('proyecto_3');
 					set_query_var('proyecto', $post_id); ?>
 					<h1 class="text-center py-10 uppercase">
-						<span class="bg-blue-500 text-white px-4 text-5xl font-bold tracking-wider"><?php the_field('etapa_comercial', $post_id); ?></span>
+						<span class="bg-blue-500 text-white px-4 text-3xl md:text-5xl font-bold tracking-wider"><?php the_field('etapa_comercial', $post_id); ?></span>
 					</h1>
 					<?php get_template_part('/part-templates/destacados');
 					wp_reset_query();
@@ -116,7 +116,7 @@ get_header(); ?>
 				</a>
 			<?php } ?>
 			<div class="mb-10 absolute bottom-0 flex justify-center items-center w-full">
-            <button class="bg-transparent hover:bg-blue-500 border border-blue-500 text-blue-500 hover:text-white px-4 py-2 rounded-0 hover:bg-opacity-90 transition-all uppercase tracking-wider text-lg" onClick="window.location.href ='<?php echo $enlace_banner; ?>';">Refiere aquí</button>
+            <button class="bg-blue-500 hover:bg-transparent border border-blue-500 text-white hover:text-blue-500 px-4 py-2 rounded-0 hover:bg-opacity-90 transition-all uppercase tracking-wider text-lg" onClick="window.location.href ='<?php echo $enlace_banner; ?>';">Refiere aquí</button>
         </div>
 		</div>
 	</section>

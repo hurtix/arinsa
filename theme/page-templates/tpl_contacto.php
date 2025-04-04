@@ -23,7 +23,7 @@ get_header(); ?>
             <div class="w-full">
                 <h2 class="text-blue-500 text-center text-4xl pb-10 uppercase tracking-wider underline font-bold">Directorio de colaboradores</h2>
                 <div>
-                    <div class="grid grid-cols-3 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <?php while (have_rows('rep-directorio')) : the_row(); ?>
                             <ul class="list-none bg-white border border-gray-200 flex flex-col justify-center p-8 mb-0">
                                 <li class="font-bold text-base uppercase mb-0"><?php the_sub_field('directorio-nombre') ?></li>

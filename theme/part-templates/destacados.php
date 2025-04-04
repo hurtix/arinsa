@@ -22,7 +22,7 @@
                 <div class="flex h-full w-full relative p-1 md:p-0 bg-white">
                     <img class="object-cover object-right w-full min-h-[50vh]" src="<?php the_field( 'proyecto-portada',$post_id ); ?>" alt="">
                     <div class="absolute right-0 bottom-0 mb-2 mr-4 mb-4">
-                        <span class="block text-5xl text-white text-right font-bold"><?php the_field( 'proyecto-area-desde',$post_id ); ?> m²</span>
+                        <span class="block text-3xl md:text-4xl text-white text-right font-bold"><?php the_field( 'proyecto-area-desde',$post_id ); ?> m²</span>
                         <span class="block text-right text-white">Área construida desde</span>
                     </div>
                 </div>
@@ -38,21 +38,21 @@
                          width="100" />
                 <?php } ?>
                 <span class="text-sm uppercase tracking-wider">Popayán, Cauca</span>
-                <h2 class="text-blue-500 mb-0 text-5xl font-bold w-2/3"><?php echo $titulo; ?></h2>
+                <h2 class="text-blue-500 mb-0 text-4xl md:text-5xl font-bold w-full md:w-2/3"><?php echo $titulo; ?></h2>
                 <span><?php the_field('direccion',$post_id); ?></span>
                 
-                <div class="grid grid-cols-4 my-4 md:flex md:gap-2 md:items-center md_my-3">
+                <div class="grid grid-cols-4 my-5 gap-2 md:flex md:gap-4 items-center">
                     <?php if (!empty($habitaciones)) { ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/bedroom.png" class="w-[35px]">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/bedroom.png" class="w-[30px] aspect-square object-cover mx-auto md:m-0">
                         <span><?php echo $habitaciones;?> alcobas</span>
                     <?php } ?>
                     <?php if (!empty($banhos)) { ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/bath.png" width="30">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/bath.png" class="w-[30px] aspect-square object-cover mx-auto md:m-0">
                         <span><?php echo $banhos;?> baños</span>
                     <?php } ?>
                     <?php if (!empty($parqueaderos)) { ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/parking.png" width="35">
-                        <span><?php echo $parqueaderos;?> parqueaderos</span>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/parking.png" class="w-[30px] aspect-square object-cover mx-auto md:m-0">
+                        <span><?php echo $parqueaderos;?> parq</span>
                     <?php } ?>
                 </div>
                 <h3>
@@ -68,7 +68,8 @@
                         <span class="text-xs">Viviendas</span>
                     </div>
                 </div>
-                <span class="absolute right-0 bottom-0 mr-2 mb-2 md:mr-4 md:mb-4 text-2xl text-blue-500 font-bold" >Ver proyecto</span>
+                <hr class="my-5 text-gray-200 md:hidden">
+                <span class="block text-center md:absolute md:right-0 md:bottom-0 md:mr-4 md:mb-4 text-2xl text-blue-500 font-bold" >Ver proyecto</span>
             </div>
         </div>
     </div>
